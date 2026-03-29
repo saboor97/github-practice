@@ -1,3 +1,4 @@
 App v1
 Hotfix applied
 Login feature added
+Added some new changes
