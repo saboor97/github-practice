@@ -1,5 +1,3 @@
-App v1
-Hotfix applied
 Login feature added
 hi
 Added some new changes
