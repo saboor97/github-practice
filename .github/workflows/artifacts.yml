@@ -1,0 +1,24 @@
+name: Artifact Demo
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - run: echo "hello world" > file.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: myfile
+          path: file.txt
+
+  use:
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: myfile
+
+      - run: cat file.txt
