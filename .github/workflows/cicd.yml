@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Move to project directory
-        run: cd project
+        run: cd project && ls -lhtr && pwd
 
       - name: Build Docker image
         run: docker build -t myapp .
