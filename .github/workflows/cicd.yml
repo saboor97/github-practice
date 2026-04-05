@@ -11,10 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Move to project directory
-        run: cd project && ls -lhtr && pwd
-
       - name: Build Docker image
+        working-directory: project
         run: docker build -t myapp .
 
       - name: Save image
