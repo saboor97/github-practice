@@ -3,6 +3,7 @@ name: CI on Push
 on:
   push:
     branches:
+      - "main"
       - "feature/*"
       - "!bug/*"
 
