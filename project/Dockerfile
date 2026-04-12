@@ -1,8 +1,3 @@
-FROM python:3.9-slim
+FROM alpine:3.19
 
-WORKDIR /app
-
-# Create a simple Python file
-RUN echo 'print("Hello from Docker container 🚀")' > app.py
-
-CMD ["python", "app.py"]
+CMD ["sleep", "infinity"]
